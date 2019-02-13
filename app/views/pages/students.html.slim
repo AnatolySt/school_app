@@ -1,0 +1,11 @@
+- @schools.each do |school|
+  div.school
+    .column = school.title
+    div.courses
+      - school.courses.each do |course|
+        .column = course.title
+        div.pupils
+          - course.pupils.each do |pupil|
+            .column = pupil.full_name
+  br
+
